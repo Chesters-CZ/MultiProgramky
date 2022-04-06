@@ -31,7 +31,8 @@ public class Main {
                         System.exit(0);
                 } else if (inp.toLowerCase().contains("sibenice")) {
                     // Sibenice.play();
-                    System.out.println("Dáme ještě nějakej?");
+                    System.out.println("Tohle zatim neni implementovany.");
+                    //System.out.println("Dáme ještě nějakej?");
                     if (scanner.nextLine().toLowerCase().charAt(0) != 'y')
                         System.exit(0);
                 } else {
