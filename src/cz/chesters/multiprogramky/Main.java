@@ -1,5 +1,9 @@
 package cz.chesters.multiprogramky;
 
+import cz.chesters.multiprogramky.kamennuzky.KamenNuzky;
+import cz.chesters.multiprogramky.prumery.Prumery;
+import cz.chesters.multiprogramky.sibenice.Sibenice;
+
 import java.util.Scanner;
 
 public class Main {
@@ -19,20 +23,19 @@ public class Main {
 
                 String inp = scanner.nextLine();
                 System.out.println();
-                if (inp.toLowerCase().contains("prum")) {
+                if (inp.toLowerCase().contains("p")) {
                     Prumery.play();
                     System.out.println("Dáme ještě nějakej?");
                     if (scanner.nextLine().toLowerCase().charAt(0) != 'y')
                         System.exit(0);
-                } else if (inp.toLowerCase().contains("kamen nuzky") || inp.toLowerCase().contains("kamennuzky")) {
+                } else if (inp.toLowerCase().contains("k")) {
                     KamenNuzky.play();
                     System.out.println("Dáme ještě nějakej?");
                     if (scanner.nextLine().toLowerCase().charAt(0) != 'y')
                         System.exit(0);
-                } else if (inp.toLowerCase().contains("sibenice")) {
-                    // Sibenice.play();
-                    System.out.println("Tohle zatim neni implementovany.");
-                    //System.out.println("Dáme ještě nějakej?");
+                } else if (inp.toLowerCase().contains("s")) {
+                    Sibenice.play();
+                    System.out.println("Dáme ještě nějakej?");
                     if (scanner.nextLine().toLowerCase().charAt(0) != 'y')
                         System.exit(0);
                 } else {

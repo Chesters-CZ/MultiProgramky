@@ -1,7 +1,7 @@
-package cz.chesters.multiprogramky;
+package cz.chesters.multiprogramky.kamennuzky;
 
-import java.lang.invoke.SwitchPoint;
-import java.util.Locale;
+import cz.chesters.multiprogramky.Mik;
+
 import java.util.Scanner;
 
 public class KamenNuzky {
@@ -50,7 +50,8 @@ public class KamenNuzky {
 
             System.out.println();
             System.out.println(Mik.BLUE + "Další kolo? y/n" + Mik.RESET);
-            inp = scanner.nextLine();
+            //noinspection UnusedAssignment
+            inp = scanner.nextLine(); // musí tady bejt, jinak to hází errory
             inp = scanner.nextLine();
             if (inp.toLowerCase().charAt(0) != 'y')
                 break;

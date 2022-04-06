@@ -1,7 +1,8 @@
-package cz.chesters.multiprogramky;
+package cz.chesters.multiprogramky.prumery;
+
+import cz.chesters.multiprogramky.Mik;
 
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Prumery {
@@ -17,7 +18,8 @@ public class Prumery {
 
         while (true) {
             System.out.println(Mik.BLUE + "Chceš zadat další číslo? y/n" + Mik.RESET);
-            inp = scanner.nextLine();
+            //noinspection UnusedAssignment
+            inp = scanner.nextLine(); // musí tady bejt, jinak to hází errory
             inp = scanner.nextLine();
             if (inp.toLowerCase().charAt(0) != 'y')
                 break;
@@ -34,7 +36,7 @@ public class Prumery {
     public static int sectiArrayList(ArrayList<Integer> list) {
         int sum = 0;
         for (Integer i : list)
-            sum = +i;
+            sum = sum + i;
         return sum;
     }
 }
