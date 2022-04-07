@@ -13,9 +13,9 @@ public class KamenNuzky {
         Symboly hrajeHrac;
         Symboly hrajeBot;
 
-        System.out.println(Mik.BG_BLUE + Mik.BLACK + "Vítej v Průměrech" + Mik.RESET);
+        System.out.println(Mik.BG_PURPLE + Mik.BLACK + "Vítej v kameni, nůžkách, papíru a teď" + Mik.RESET);
         while (true) {
-            System.out.println(Mik.BLUE + "Vyber si, co ukážeš" + Mik.RESET);
+            System.out.println(Mik.PURPLE + "Vyber si, co ukážeš (kámen, nůžky, papír)" + Mik.RESET);
             inp = scanner.nextLine().toLowerCase();
             if (inp.contains("p")) {
                 hrajeHrac = Symboly.PAPIR;
@@ -33,15 +33,15 @@ public class KamenNuzky {
                 case 1 -> Symboly.NUZKY;
                 default -> Symboly.PAPIR;
             };
-            System.out.println(Mik.BLUE + "Protivník ukázal " + hrajeBot + Mik.RESET);
+            System.out.println(Mik.PURPLE + "Protivník ukázal " + hrajeBot + Mik.RESET);
 
             if (hrajeBot == hrajeHrac) {
-                System.out.println(Mik.BLUE + "Remíza." + Mik.RESET);
+                System.out.println(Mik.PURPLE + "Remíza." + Mik.RESET);
             } else if (vyhralClovek(hrajeHrac, hrajeBot)) {
-                System.out.println(Mik.BLUE + "Vyhráls!" + Mik.RESET);
+                System.out.println(Mik.PURPLE + "Vyhráls!" + Mik.RESET);
                 playerScore++;
             } else {
-                System.out.println(Mik.BLUE + "Prohráls" + Mik.RESET);
+                System.out.println(Mik.PURPLE + "Prohráls" + Mik.RESET);
                 botScore++;
             }
 
@@ -49,7 +49,7 @@ public class KamenNuzky {
             stavHry(playerScore, botScore);
 
             System.out.println();
-            System.out.println(Mik.BLUE + "Další kolo? y/n" + Mik.RESET);
+            System.out.println(Mik.PURPLE + "Další kolo? y/n" + Mik.RESET);
             //noinspection UnusedAssignment
             inp = scanner.nextLine(); // musí tady bejt, jinak to hází errory
             inp = scanner.nextLine();
@@ -60,11 +60,11 @@ public class KamenNuzky {
 
     public static void stavHry(int pS, int bS) {
         if (pS > bS)
-            System.out.println(Mik.BLUE + "Stav je " + pS + ":" + bS + " pro tebe" + Mik.RESET);
+            System.out.println(Mik.PURPLE + "Stav je " + pS + ":" + bS + " pro tebe" + Mik.RESET);
         else if (pS < bS)
-            System.out.println(Mik.BLUE + "Stav je " + bS + ":" + pS + " pro protivníka" + Mik.RESET);
+            System.out.println(Mik.PURPLE + "Stav je " + bS + ":" + pS + " pro protivníka" + Mik.RESET);
         else
-            System.out.println(Mik.BLUE + "Stav je " + pS + ":" + bS + Mik.RESET);
+            System.out.println(Mik.PURPLE + "Stav je " + pS + ":" + bS + Mik.RESET);
     }
 
     public static boolean vyhralClovek(Symboly plr, Symboly bot) {
