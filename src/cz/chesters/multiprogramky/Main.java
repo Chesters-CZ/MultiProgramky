@@ -23,13 +23,13 @@ public class Main {
 
                 String inp = scanner.nextLine();
                 System.out.println();
-                if (inp.toLowerCase().contains("p")) {
-                    Prumery.play();
+                if (inp.toLowerCase().contains("k")) {
+                    KamenNuzky.play();
                     System.out.println("Dáme ještě nějakej? y/n");
                     if (scanner.nextLine().toLowerCase().charAt(0) != 'y')
                         System.exit(0);
-                } else if (inp.toLowerCase().contains("k")) {
-                    KamenNuzky.play();
+                } else if (inp.toLowerCase().contains("p")) {
+                    Prumery.play();
                     System.out.println("Dáme ještě nějakej? y/n");
                     if (scanner.nextLine().toLowerCase().charAt(0) != 'y')
                         System.exit(0);
