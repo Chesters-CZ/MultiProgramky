@@ -187,6 +187,7 @@ public class Sibenice {
                         }
                         if (hasWon(pismna)) {
                             score++;
+                            slova.remove(wordPos);
                             System.out.println(Mik.GREEN + hangman[lives] + Mik.RESET);
                             System.out.println();
                             System.out.println(Mik.GREEN + makeUnderscores(pismna) + Mik.RESET);
