@@ -186,6 +186,7 @@ public class Sibenice {
                             break maingame;
                         }
                         if (hasWon(pismna)) {
+                            score++;
                             System.out.println(Mik.GREEN + hangman[lives] + Mik.RESET);
                             System.out.println();
                             System.out.println(Mik.GREEN + makeUnderscores(pismna) + Mik.RESET);
