@@ -25,17 +25,17 @@ public class Main {
                 System.out.println();
                 if (inp.toLowerCase().contains("p")) {
                     Prumery.play();
-                    System.out.println("Dáme ještě nějakej?");
+                    System.out.println("Dáme ještě nějakej? y/n");
                     if (scanner.nextLine().toLowerCase().charAt(0) != 'y')
                         System.exit(0);
                 } else if (inp.toLowerCase().contains("k")) {
                     KamenNuzky.play();
-                    System.out.println("Dáme ještě nějakej?");
+                    System.out.println("Dáme ještě nějakej? y/n");
                     if (scanner.nextLine().toLowerCase().charAt(0) != 'y')
                         System.exit(0);
                 } else if (inp.toLowerCase().contains("s")) {
                     Sibenice.play();
-                    System.out.println("Dáme ještě nějakej?");
+                    System.out.println("Dáme ještě nějakej? y/n");
                     if (scanner.nextLine().toLowerCase().charAt(0) != 'y')
                         System.exit(0);
                 } else {
